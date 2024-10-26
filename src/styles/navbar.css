@@ -1,0 +1,84 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #001e38; /* Navy blue background */
+    padding: 1rem 2rem;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    margin-right: 1.5rem;
+}
+
+.logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.company-name {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-item {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    position: relative;
+    padding: 0.5rem;
+}
+
+/* Prevent "Services" link color from changing */
+.nav-item.dropdown .dropdown-toggle {
+    color: white;
+    text-decoration: none; 
+}
+
+/* Dropdown styling */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #001e38;
+    padding: 0.5rem 0;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    min-width: 180px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    text-decoration: none; 
+}
+
+.dropdown-item {
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    display: block;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.dropdown-item:hover {
+    background-color: #2a302a; /* Light gray background on hover */
+}
+
+.dropdown-toggle:hover {
+    color: white; /* Keep "Services" link white on hover */
+    text-decoration: none;
+}
