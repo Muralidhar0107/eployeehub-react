@@ -13,17 +13,14 @@ function Navbar() {
             <div className="navbar-links">
                 <Link to="/" className="nav-item">Home</Link>
                 <Link to="/about" className="nav-item">About</Link>
-
-                {/* Services link with dropdown */}
                 <div className="nav-item dropdown">
                     <Link to="/services" className="dropdown-toggle">Services</Link>
                     <div className="dropdown-menu">
                         <Link to="/services/create" className="dropdown-item">Create Employee</Link>
                         <Link to="/services/update" className="dropdown-item">Update Employee</Link>
-                        <Link to="/services/delete" className="dropdown-item">Delete Employee</Link>
+                        <Link to="/services/employees" className="dropdown-item">Fetch Employees</Link>
                     </div>
                 </div>
-
                 <Link to="/contact" className="nav-item">Contact</Link>
             </div>
         </nav>
