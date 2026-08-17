@@ -1,0 +1,28 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "first_name": {
+      "type": ["string", "null"],
+      "description": "First name of the participant. Extract only from the participant name field. If the name is written as last name followed by first name separated by a comma then return the part after the comma. If the value is not available return null."
+    },
+    "last_name": {
+      "type": ["string", "null"],
+      "description": "Last name of the participant. Extract only from the participant name field. If the name is written as last name followed by first name separated by a comma then return the part before the comma. If the value is not available return null."
+    },
+    "contract_number": {
+      "type": ["string", "null"],
+      "description": "Contract number of the participant. Extract only the value directly associated with the Contract Number label. Do not use the Social Security Number Plan Number Account Number Group Number or any other identifier. If the Contract Number field is blank or unavailable return null."
+    },
+    "ssn": {
+      "type": ["string", "null"],
+      "description": "Social Security Number of the participant. Extract only the value directly associated with the Social Security Number label or SSN label. Return the value exactly as shown in the document. Do not use the Contract Number Plan Number Account Number or any other identifier. If the SSN field is blank or unavailable return null."
+    }
+  },
+  "required": [
+    "first_name",
+    "last_name",
+    "contract_number",
+    "ssn"
+  ]
+}
