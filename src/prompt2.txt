@@ -4,19 +4,19 @@
   "properties": {
     "first_name": {
       "type": ["string", "null"],
-      "description": "First name of the participant Extract only from the participant name field If the name contains a comma return the text after the comma If the value is not available return null"
+      "description": "Extract the first name from the Participant Name field. If the name contains a comma then the text after the comma is the first name. If the field is blank return null."
     },
     "last_name": {
       "type": ["string", "null"],
-      "description": "Last name of the participant Extract only from the participant name field If the name contains a comma return the text before the comma If the value is not available return null"
+      "description": "Extract the last name from the Participant Name field. If the name contains a comma then the text before the comma is the last name. If the field is blank return null."
     },
     "contract_number": {
       "type": ["string", "null"],
-      "description": "Contract number of the participant Extract only the value associated with the Contract Number label Do not use the Social Security Number Plan Number Account Number Group Number or another identifier If the Contract Number field is blank return null"
+      "description": "Extract only the value written next to the Contract Number label. Do not extract the Plan Number. Do not extract the Social Security Number. Do not extract an Account Number. Do not extract a Group Number. Do not extract any other number from the document. If the Contract Number field is blank or does not contain a value return null."
     },
     "ssn": {
       "type": ["string", "null"],
-      "description": "Social Security Number of the participant Extract only the value associated with the Social Security Number label or SSN label Return the value exactly as shown Do not use the Contract Number Plan Number Account Number or another identifier If the SSN field is blank return null"
+      "description": "Extract only the value written next to the Participant Social Security Number label. This value is the SSN. The SSN is normally a 9 digit number. Never return the SSN as the Contract Number. If the Participant Social Security Number field is blank return null."
     }
   },
   "required": [
